@@ -7,16 +7,16 @@ CanadianDollarValue = 0.74
 
 #define functions
 def conversionToPesos(amount):
-    return amount * PesoValue
+    return amount / PesoValue
 
 def conversionToEuro(amount):
-    return amount * EuroValue
+    return amount / EuroValue
     
 def conversionToYen(amount):
-    return amount * YenValue
+    return amount / YenValue
     
 def conversionToCanadianDollar(amount):
-    return amount * CanadianDollarValue 
+    return amount / CanadianDollarValue 
 
     
 #program start
@@ -35,8 +35,30 @@ while menuChoice < 0 or menuChoice > 4:
     print("Invalid entry, please try again")
     menuChoice = int(input())
     
-    if menuChoice == 1:
+if menuChoice == 1: #Peso
         print("Please type how many dollars you want to convert. Please no commas or spaces.")
         amount = int(input())
-        conversionToPesos(amount)
+        Converted_amount = conversionToPesos(amount)
+        print("Your "+ str(amount)+ " dollar(s) are equal to "+ str(Converted_amount) + " Pesos!")
+        
+    
+if menuChoice == 2: #Euro
+        print("Please type how many dollars you want to convert. Please no commas or spaces.")
+        amount = int(input())
+        Converted_amount = conversionToEuro(amount)
+        print("Your "+ str(amount)+ " dollar(s) are equal to "+ str(Converted_amount) + " Euros!")
+        
+    
+if menuChoice == 3: #Yen
+        print("Please type how many dollars you want to convert. Please no commas or spaces.")
+        amount = int(input())
+        Converted_amount = conversionToYen(amount)
+        print("Your "+ str(amount)+ " dollar(s) are equal to "+ str(Converted_amount) + " Yen!")
+        
+    
+if menuChoice == 4: #Canadian Dollars
+        print("Please type how many dollars you want to convert. Please no commas or spaces.")
+        amount = int(input())
+        Converted_amount = conversionToCanadianDollar(amount)
+        print("Your "+ str(amount)+ " dollar(s) are equal to "+ str(Converted_amount) + " Canadian Dollars!")
         
